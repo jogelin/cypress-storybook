@@ -77,7 +77,7 @@ describe('Button', () => {
 
   context('when the Button/Controls story is rendered', () => {
     beforeEach(() => {
-      cy.loadStory('Example/Button', 'Primary')
+      cy.loadStory('Example/Button', 'WithHost')
     })
 
     context('when the control is changed to "Test"', () => {

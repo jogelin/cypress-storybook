@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { text, withKnobs } from '@storybook/addon-knobs'
 
 import Button from './button.component'
+import ButtonComponent from './button.component'
 
 export default {
   title: 'Example/Button',
@@ -48,3 +49,13 @@ Small.args = {
   size: 'small',
   label: 'Button',
 }
+
+export const WithHost = () => ({
+  moduleMetadata: {
+    declarations: [ButtonComponent]
+  },
+  template: `
+    <storybook-button size='small' label='Button'></storybook-button>
+  `
+});
+WithHost.storyName = 'With Host';
